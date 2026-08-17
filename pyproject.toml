@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-api-calibration"
+version = "0.1.0"
+description = "统一API与订阅版的体验差异 - 解决API降智问题的通用方案"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "yaowanxiang", email = "yaowanxiang@qut.edu.cn"}
+]
+keywords = [
+    "LLM",
+    "API",
+    "Claude",
+    "Anthropic",
+    "calibration",
+    "prompt-engineering"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "anthropic>=0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+docs = [
+    "sphinx>=5.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yaowanxiang/llm-api-calibration"
+Documentation = "https://github.com/yaowanxiang/llm-api-calibration#readme"
+Repository = "https://github.com/yaowanxiang/llm-api-calibration"
+"Bug Tracker" = "https://github.com/yaowanxiang/llm-api-calibration/issues"
+
+[tool.setuptools]
+packages = ["llm_api_calibration"]
+
+[tool.setuptools.package-data]
+llm_api_calibration = ["prompts/*.txt"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
