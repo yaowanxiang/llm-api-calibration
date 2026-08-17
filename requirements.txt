@@ -1,0 +1,21 @@
+anthropic>=0.7.0
+requests>=2.28.0
+
+# Optional dependencies for extended features
+# duckduckgo-search>=3.9.0  # For web search
+# tavily-python>=0.2.0     # For advanced search
+# PyPDF2>=3.0.0            # For PDF parsing
+# python-docx>=0.8.11      # For DOCX parsing
+
+# Development dependencies (install with pip install -e ".[dev]")
+pytest>=7.0.0
+pytest-cov>=4.0.0
+flake8>=6.0.0
+black>=23.0.0
+isort>=5.12.0
+mypy>=1.0.0
+
+# Documentation dependencies (install with pip install -e ".[docs]")
+sphinx>=5.0.0
+sphinx-rtd-theme>=1.0.0
+myst-parser>=0.18.0

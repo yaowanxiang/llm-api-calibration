@@ -1,0 +1,17 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include pyproject.toml
+
+recursive-include llm_api_calibration *.py
+recursive-include docs *.md *.rst
+recursive-include examples *.py
+recursive-include tests *.py
+
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
+global-exclude .git*
+global-exclude .github
+prune .github
